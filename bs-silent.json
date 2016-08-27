@@ -1,0 +1,7 @@
+{
+  "open": false,
+  "port": 4000,
+  "watchOptions": {
+    "ignored": "./"
+  }
+}

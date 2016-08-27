@@ -11,7 +11,7 @@ export class PixiNativeExample {
         // create the root of the scene graph
         var stage = new PIXI.Container();
 
-        var sprites = new PIXI.particles.ParticleContainer(10000, {
+        var sprites = new (PIXI as any).particles.ParticleContainer(10000, {
             scale: true,
             position: true,
             rotation: true,
@@ -110,7 +110,7 @@ export class PixiNativeExample {
 
 
         // Console settings
-        EngineAdapter.instance = new PixiAdapter({canvas: renderer.view, renderer: renderer, stage: stage});
+        EngineAdapter.instance = new PixiAdapter({canvas: renderer.view, renderer: renderer, nativeStage: stage});
         CC.startInit(EngineAdapter.instance.createDisplayObjectContainerWrapper(stage));
     }
 

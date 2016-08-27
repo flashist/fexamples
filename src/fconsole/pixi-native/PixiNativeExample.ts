@@ -3,7 +3,7 @@ import {CC} from "fconsole/dist/index";
 
 export class PixiNativeExample {
     constructor() {
-        alert("PixiNativeExample | constructor");
+        alert("FConsole: pixi native\n- Press the ` key to show/hide the console.\n- Click on the DL button to show the Display List Inspector.");
 
         var renderer = PIXI.autoDetectRenderer(800, 600);
         document.body.appendChild(renderer.view);
@@ -112,6 +112,7 @@ export class PixiNativeExample {
         // Console settings
         EngineAdapter.instance = new PixiAdapter({canvas: renderer.view, renderer: renderer, nativeStage: stage});
         CC.startInit(EngineAdapter.instance.createDisplayObjectContainerWrapper(stage));
+        CC.visible = true;
     }
 
 }

@@ -22,12 +22,12 @@
         }
     );
     // Importing the application entry point
-    SystemJS.import("src/pixi-native/index").then(
+    SystemJS.import("src/fconsole/pixi-native/index").then(
         function (value) {
-            console.log("The pixi-native/index.ts was initialized OK! value: ", value);
+            console.log("The src/fconsole/pixi-native/index was initialized OK! value: ", value);
         },
         function (err) {
-            console.error("ERROR! The pixi-native/index.ts wasn't initialized correctly! err: ", err);
+            console.error("ERROR! The src/fconsole/pixi-native/index wasn't initialized correctly! err: ", err);
         }
     );
 

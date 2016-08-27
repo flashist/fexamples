@@ -44,15 +44,15 @@ export class PixiNativeExample {
             dude.tint = Math.random() * 0x808080;
 
             // create a random direction in radians
-            dude.direction = Math.random() * Math.PI * 2;
+            (dude as any).direction = Math.random() * Math.PI * 2;
 
             // this number will be used to modify the direction of the sprite over time
-            dude.turningSpeed = Math.random() - 0.8;
+            (dude as any).turningSpeed = Math.random() - 0.8;
 
             // create a random speed between 0 - 2, and these maggots are slooww
-            dude.speed = (2 + Math.random() * 2) * 0.2;
+            (dude as any).speed = (2 + Math.random() * 2) * 0.2;
 
-            dude.offset = Math.random() * 100;
+            (dude as any).offset = Math.random() * 100;
 
             // finally we push the dude into the maggots array so it it can be easily accessed later
             maggots.push(dude);
@@ -111,7 +111,7 @@ export class PixiNativeExample {
 
         // Console settings
         EngineAdapter.instance = new PixiAdapter({canvas: renderer.view, renderer: renderer, stage: stage});
-        CC.startInit(stage);
+        CC.startInit(EngineAdapter.instance.createDisplayObjectContainerWrapper(stage));
     }
 
 }

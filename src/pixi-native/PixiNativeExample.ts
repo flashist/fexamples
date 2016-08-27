@@ -1,4 +1,5 @@
 import {EngineAdapter, PixiAdapter} from "fgraphics/dist/index";
+import {CC} from "fconsole/dist/index";
 
 export class PixiNativeExample {
     constructor() {
@@ -109,8 +110,8 @@ export class PixiNativeExample {
 
 
         // Console settings
-        EngineAdapter.instance = new PixiAdapter({renderer: renderer, stage: stage});
-        EngineAdapter.init
+        EngineAdapter.instance = new PixiAdapter({canvas: renderer.view, renderer: renderer, stage: stage});
+        CC.startInit(stage);
     }
 
 }

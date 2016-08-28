@@ -35,6 +35,7 @@
     "require-dir": "0.3.0",
     "run-sequence": "1.2.2",
     "systemjs": "0.19.31",
+    "systemjs-builder": "0.15.30",
     "tsd": "0.6.5",
     "typescript": "1.8.10",
     "vinyl-fs": "2.4.3",

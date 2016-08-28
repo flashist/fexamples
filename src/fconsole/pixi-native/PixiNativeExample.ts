@@ -1,9 +1,10 @@
 import {EngineAdapter, PixiAdapter} from "fgraphics/dist/index";
 import {CC} from "fconsole/dist/index";
+import {FConsoleSettings} from "../FConsoleSettings";
 
 export class PixiNativeExample {
     constructor() {
-        alert("FConsole: pixi native\n- Press the ` key to show/hide the console.\n- Click on the DL button to show the Display List Inspector.");
+        alert(FConsoleSettings.FCONSOLE_PIXI_NATIVE_ALERT);
 
         var renderer = PIXI.autoDetectRenderer(800, 600);
         document.body.appendChild(renderer.view);

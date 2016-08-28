@@ -7,8 +7,11 @@ export class PixiAdapterExample {
         alert(FConsoleSettings.FCONSOLE_PIXI_ADAPTER_ALERT);
 
         // Console settings
-        EngineAdapter.instance = new PixiAdapter({canvas: renderer.view, renderer: renderer, nativeStage: stage});
-        CC.startInit(EngineAdapter.instance.createDisplayObjectContainerWrapper(stage));
+        EngineAdapter.instance = new PixiAdapter({rendererWidth: 800, rendererHeight: 600});
+        document.body.appendChild(EngineAdapter.instance.canvas);
+
+
+        CC.startInit(EngineAdapter.instance.createDisplayObjectContainerWrapper(EngineAdapter.instance.stage.object));
         CC.visible = true;
     }
 

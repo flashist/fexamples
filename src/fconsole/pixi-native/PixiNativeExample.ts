@@ -12,19 +12,24 @@ export class PixiNativeExample {
         // create the root of the scene graph
         var stage = new PIXI.Container();
 
-        var sprites = new (PIXI as any).particles.ParticleContainer(10000, {
+        // In the original pixi-example the ParticleContainer class was used,
+        // unfortunately, it works wierd in terms of calculation bounds,
+        // because of that, sometimes ParticleContainer doesn't return correct data,
+        // and correct children under the cursor
+        /*var sprites = new (PIXI as any).particles.ParticleContainer(10000, {
             scale: true,
             position: true,
             rotation: true,
             uvs: true,
             alpha: true
-        });
+        });*/
+        var sprites = new PIXI.Container();
         stage.addChild(sprites);
 
         // create an array to store all the sprites
         var maggots = [];
 
-        var totalSprites = renderer instanceof PIXI.WebGLRenderer ? 10000 : 100;
+        var totalSprites = renderer instanceof PIXI.WebGLRenderer ? 1000 : 100;
 
         for (var i = 0; i < totalSprites; i++) {
             // create a new Sprite

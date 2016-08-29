@@ -118,6 +118,7 @@ export class PixiNativeExample {
         // Console settings
         EngineAdapter.instance = new PixiAdapter({renderer: renderer, nativeStage: stage});
         CC.startInit(EngineAdapter.instance.createDisplayObjectContainerWrapper(stage));
+        // Optional
         CC.visible = true;
     }
 

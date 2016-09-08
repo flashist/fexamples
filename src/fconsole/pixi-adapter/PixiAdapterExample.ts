@@ -1,5 +1,5 @@
 import {EngineAdapter, PixiAdapter, TickerEvent} from "fgraphics/dist/index";
-import {CC} from "fconsole/dist/index";
+import {FC} from "fconsole/dist/index";
 import {Logger, ConsoleCustomLoggerItem} from "fcore/dist/index";
 import {FConsoleSettings} from "../FConsoleSettings";
 import {CustomContainer} from "./custom/CustomContainer";
@@ -44,14 +44,14 @@ export class PixiAdapterExample {
         }
 
         // Initialization of the console (should be initialized after initialization of the adapter)
-        CC.startInit(
+        FC.startInit(
             EngineAdapter.instance.stage,
             // Password for showing/hiding the console.
             // ` is the default password, and might not be passed into the startInit method.
             "`"
         );
         // The console might be hidden at the beginning and shown by pressing a password combination
-        CC.visible = true;
+        FC.visible = true;
 
         // Render graphics by ticker events
         EngineAdapter.instance.mainTicker.addEventListener(

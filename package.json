@@ -13,10 +13,11 @@
   },
   "dependencies": {
     "es6-promise": "3.2.1",
-    "fconsole": "0.0.25",
     "pixi.js": "4.0.0",
     "systemjs": "0.19.31",
-    "typescript": "1.8.10"
+    "typescript": "1.8.10",
+
+    "fconsole": "0.0.26"
   },
   "devDependencies": {
     "del": "2.2.2",

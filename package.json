@@ -17,7 +17,7 @@
     "systemjs": "0.19.31",
     "typescript": "1.8.10",
 
-    "fconsole": "0.0.28"
+    "fconsole": "0.0.29"
   },
   "devDependencies": {
     "del": "2.2.2",

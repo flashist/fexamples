@@ -33,9 +33,12 @@ export class PixiAdapterExample {
         for (let stuffIndex:number = 0; stuffIndex < stuffCount; stuffIndex++) {
             if (Math.random() < 0.5) {
                 tempStuff = new CustomContainer();
+                tempStuff.name = "container" + stuffIndex;
             } else {
                 tempStuff = new CustomGraphics();
+                tempStuff.name = "graphics" + stuffIndex;
             }
+
 
             tempStuff.x = Math.random() * EngineAdapter.instance.rendererWidth;
             tempStuff.y = Math.random() * EngineAdapter.instance.rendererHeight;

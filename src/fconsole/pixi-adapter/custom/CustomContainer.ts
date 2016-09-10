@@ -10,6 +10,7 @@ export class CustomContainer extends PIXI.Container {
 
         let tempGraphics = new CustomGraphics();
         this.addChild(tempGraphics);
+        tempGraphics.name = "insideGraphics";
     }
 
 }

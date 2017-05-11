@@ -1,14 +1,15 @@
 var gulp = require("gulp");
-var del = require("del");
+var rimraf = require("rimraf");
 
 gulp.task(
     "clean",
-    function (cb) {
-        console.log("START! clean.js");
+    (cb) => {
+        console.log("clean start");
 
-        del(["dist/**/*"]).then(
-            function() {
-                console.log("FINISH! compile.js");
+        rimraf(
+            "./dist/**/*",
+            () => {
+                console.log("clean callback");
                 cb();
             }
         );

@@ -1,27 +1,26 @@
 var gulp = require("gulp");
 var shell = require('gulp-shell');
-var del = require("del");
 
 gulp.task(
     "compile",
     function (cb) {
-        console.log("START! compile.js");
 
         gulp.src(".", {read: false})
-            .pipe(shell([
-                "tsc"
-            ]))
-            .on(
+            .pipe(
+                shell(
+                    ["tsc"]
+                )
+
+            ).on(
                 "end",
                 function () {
-                    console.log("FINISH! compile.js");
                     cb();
                 }
 
-            ).on(
+        ).on(
             "error",
             function () {
-                console.log("ERROR! compile.js");
+                console.error("ERROR! compile.js");
             }
         );
     }

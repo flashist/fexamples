@@ -1,10 +1,28 @@
-import {EngineAdapter, PixiAdapter} from "fgraphics/dist/index";
-import {FC} from "fconsole/dist/index";
-import {FConsoleSettings} from "../FConsoleSettings";
+
+import {Container} from "pixi.js";
+
+import {FApplication} from "fadapter";
+import {ArrayTools} from "fcore";
 
 export class PixiNativeExample {
     constructor() {
-        alert(FConsoleSettings.FCONSOLE_PIXI_NATIVE_ALERT);
+
+        ArrayTools.checkIfEqual([], []);
+
+        /*let tempCont = new Container();
+
+        let tempCont2 = new Container();
+        tempCont.addChild(tempCont2);*/
+
+        /*let application = new FApplication(
+            {
+                width: 800,
+                height: 600
+            }
+        );
+        document.body.appendChild(application.view);*/
+
+        /*alert(FConsoleSettings.FCONSOLE_PIXI_NATIVE_ALERT);
 
         var renderer = PIXI.autoDetectRenderer(800, 600);
         document.body.appendChild(renderer.view);
@@ -16,13 +34,13 @@ export class PixiNativeExample {
         // unfortunately, it works wierd in terms of calculation bounds,
         // because of that, sometimes ParticleContainer doesn't return correct data,
         // and correct children under the cursor
-        /*var sprites = new (PIXI as any).particles.ParticleContainer(10000, {
+        /!*var sprites = new (PIXI as any).particles.ParticleContainer(10000, {
             scale: true,
             position: true,
             rotation: true,
             uvs: true,
             alpha: true
-        });*/
+        });*!/
         var sprites = new PIXI.Container();
         stage.addChild(sprites);
 
@@ -119,7 +137,7 @@ export class PixiNativeExample {
         EngineAdapter.instance = new PixiAdapter({renderer: renderer, nativeStage: stage});
         FC.startInit(EngineAdapter.instance.createDisplayObjectContainerWrapper(stage));
         // Optional
-        FC.visible = true;
+        FC.visible = true;*/
     }
 
 }

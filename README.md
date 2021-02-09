@@ -1,6 +1,6 @@
 # FExamples
 
-Demo examples of using the [fconsole](https://github.com/flashist/fconsole), [fgraphics](https://github.com/flashist/fgraphics), [flibs](https://github.com/flashist/flibs) and [fcore](https://github.com/flashist/fcore) libraries.
+Demo examples of using the [FConsole](https://github.com/flashist/fconsole), [FLibs](https://github.com/flashist/flibs) and [FCore](https://github.com/flashist/fcore) libraries.
 
 ### [Demo site] (https://flashist.github.io/fexamples/)
 
